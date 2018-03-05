@@ -1,0 +1,29 @@
+{
+  "name": "quiz",
+  "version": "1.0.0",
+  "description": "Proyecto Quiz",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbartu/P2_QUIZ.git"
+  },
+  "keywords": [
+    "quiz",
+    "core",
+    "node"
+  ],
+  "author": "Vicente Bartual",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/vbartu/P2_QUIZ/issues"
+  },
+  "homepage": "https://github.com/vbartu/P2_QUIZ#readme",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "figlet": "^1.2.0"
+  }
+}
