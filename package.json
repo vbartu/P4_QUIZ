@@ -24,6 +24,8 @@
   "homepage": "https://github.com/vbartu/P2_QUIZ#readme",
   "dependencies": {
     "chalk": "^2.3.2",
-    "figlet": "^1.2.0"
+    "figlet": "^1.2.0",
+    "sequelize": "^4.37.1",
+    "sqlite3": "^4.0.0"
   }
 }

@@ -81,6 +81,6 @@ rl.on('line', (line) => {
       break;
   }
 }).on('close', () => {
-  log("Adios!");
+  log(" Adios!");
   process.exit(0);
 });
