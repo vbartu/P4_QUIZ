@@ -1,6 +1,7 @@
 
-const Sequelize = require('sequelize')
+const Sequelize = require('sequelize');
 const {models} = require('./model');
+const process = require('process');
 const {log, biglog, errorlog, colorize} = require('./out');
 
 exports.helpCmd = (socket, rl) => {
@@ -125,8 +126,8 @@ exports.testCmd = (socket, rl, id) => {
   })
   .catch(error => {
     errorlog(socket, error.message);
-  })
-  .then(() => rl.prompt())
+    rl.prompt()
+  });
 }
 
 exports.playCmd = (socket, rl) => {
@@ -169,8 +170,8 @@ exports.playCmd = (socket, rl) => {
   })
   .catch(error => {
     errorlog(socket, error.message);
-  })
-  .then(() => rl.prompt());
+    rl.prompt();
+  });
 }
 
 exports.deleteCmd = (socket, rl, id) => {
@@ -194,10 +195,10 @@ exports.editCmd = (socket, rl, id) => {
       throw new Error(`No existe un quiz asociado al id = ${id}.`);
     }
 
-    process.stdout.isTTY && setTimeout(() => {rl.write(quiz.question)}, 0);
+    //process.stdout.isTTY && setTimeout(() => {rl.write(quiz.question)}, 0);
     return makeQuestion(rl, ' Introduzca la pregunta: ')
     .then(q => {
-      process.stdout.isTTY && setTimeout(() => {rl.write(quiz.answer)}, 0);
+      //process.stdout.isTTY && setTimeout(() => {rl.write(quiz.answer)}, 0);
       return makeQuestion(rl, ' Introduzca la respuesta: ')
       .then(a => {
         quiz.question = q;
