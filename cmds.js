@@ -226,7 +226,7 @@ exports.editCmd = (socket, rl, id) => {
 
 }
 
-exports.creditsCmd = rl => {
+exports.creditsCmd = (socket, rl) => {
   log(socket, " Autor de la práctica:");
   log(socket, " Vicente Bartual Ferrán");
   rl.prompt();
